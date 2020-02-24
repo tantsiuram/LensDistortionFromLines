@@ -785,7 +785,7 @@ void removeLines(
     for(int l=k+1; l<(int)image_primitive.get_lines().size(); l++)
 		{
       // WE CHECK THE NUMBER OF POINTS
-      if(!image_primitive.get_lines()[l].get_points().size() > 0)
+      if(!(image_primitive.get_lines()[l].get_points().size() > 0))
         continue;
       double paso=
          image_primitive.get_lines()[k].get_a()*image_primitive.get_lines()[l].get_a()+
